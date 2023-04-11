@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-2-i" LaunchTime="1681180421" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/compare_20.dcp">
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-2-i" LaunchTime="1681181770" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/compare_20.dcp">
   <File Type="PA-TCL" Name="compare_512.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="compare_512_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="compare_512_reports.tcl"/>
@@ -11,6 +11,13 @@
   <File Type="VDS-TIMING-PB" Name="compare_512_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ADDTiming.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/new/compare_20.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -20,14 +27,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/new/compare_512.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/ADDTiming.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
