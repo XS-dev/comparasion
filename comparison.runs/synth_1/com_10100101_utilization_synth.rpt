@@ -1,14 +1,14 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2.1 (win64) Build 3414424 Sun Dec 19 10:57:22 MST 2021
-| Date         : Tue Apr 11 14:48:52 2023
+| Date         : Tue Apr 11 15:26:55 2023
 | Host         : XS-WIN running 64-bit major release  (build 9200)
-| Command      : report_utilization -file com_1010_1010_utilization_synth.rpt -pb com_1010_1010_utilization_synth.pb
-| Design       : com_1010_1010
+| Command      : report_utilization -file com_10100101_utilization_synth.rpt -pb com_10100101_utilization_synth.pb
+| Design       : com_10100101
 | Device       : xczu3eg-sfvc784-2-i
 | Speed File   : -2
 | Design State : Synthesized
----------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------
 
 Utilization Design Information
 
@@ -32,11 +32,11 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*               | 2902 |     0 |          0 |     70560 |  4.11 |
-|   LUT as Logic          | 2902 |     0 |          0 |     70560 |  4.11 |
+| CLB LUTs*               | 2908 |     0 |          0 |     70560 |  4.12 |
+|   LUT as Logic          | 2908 |     0 |          0 |     70560 |  4.12 |
 |   LUT as Memory         |    0 |     0 |          0 |     28800 |  0.00 |
-| CLB Registers           |  672 |     0 |          0 |    141120 |  0.48 |
-|   Register as Flip Flop |  672 |     0 |          0 |    141120 |  0.48 |
+| CLB Registers           |  660 |     0 |          0 |    141120 |  0.47 |
+|   Register as Flip Flop |  660 |     0 |          0 |    141120 |  0.47 |
 |   Register as Latch     |    0 |     0 |          0 |    141120 |  0.00 |
 | CARRY8                  |  512 |     0 |          0 |      8820 |  5.80 |
 | F7 Muxes                |    0 |     0 |          0 |     35280 |  0.00 |
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 672   |          Yes |           - |        Reset |
+| 660   |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -150,11 +150,11 @@ Table of Contents
 +----------+-------+---------------------+
 | INBUF    | 10243 |                 I/O |
 | IBUFCTRL | 10243 |              Others |
-| LUT4     |  5120 |                 CLB |
-| FDCE     |   672 |            Register |
+| LUT4     |  5129 |                 CLB |
+| FDCE     |   660 |            Register |
 | CARRY8   |   512 |                 CLB |
 | LUT5     |   256 |                 CLB |
-| LUT6     |    85 |                 CLB |
+| LUT6     |    82 |                 CLB |
 | OBUF     |    20 |                 I/O |
 | LUT1     |     1 |                 CLB |
 | BUFGCE   |     1 |               Clock |

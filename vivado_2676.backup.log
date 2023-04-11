@@ -2,10 +2,10 @@
 # Vivado v2021.2.1 (64-bit)
 # SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
 # IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
-# Start of session at: Tue Apr 11 15:22:58 2023
-# Process ID: 15916
+# Start of session at: Tue Apr 11 14:43:29 2023
+# Process ID: 2676
 # Current directory: L:/lidar/PPJ/comparison
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8208 L:\lidar\PPJ\comparison\comparison.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10508 L:\lidar\PPJ\comparison\comparison.xpr
 # Log file: L:/lidar/PPJ/comparison/vivado.log
 # Journal file: L:/lidar/PPJ/comparison\vivado.jou
 # Running On: XS-WIN, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14888 MB
@@ -50,32 +50,28 @@ WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 avail
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at D:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
 WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at D:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
 INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'L:/lidar/PPJ/comparison/comparison.gen/sources_1'.
-CRITICAL WARNING: [Project 1-19] Could not find the file 'L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v'.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2021.2/data/ip'.
-open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:07 . Memory (MB): peak = 1354.293 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 1351.188 ; gain = 0.000
 update_compile_order -fileset sources_1
-export_ip_user_files -of_objects  [get_files L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v] -no_script -reset -force -quiet
-remove_files  L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v
+close [ open L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v w ]
+add_files L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v
 update_compile_order -fileset sources_1
-close [ open L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_10100101.v w ]
-add_files L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_10100101.v
-update_compile_order -fileset sources_1
-set_property top com_10100101 [current_fileset]
+set_property top com_1010_1010 [current_fileset]
 update_compile_order -fileset sources_1
 reset_run synth_1
-INFO: [Project 1-1161] Replacing file L:/lidar/PPJ/comparison/comparison.srcs/utils_1/imports/synth_1/compare_20.dcp with file L:/lidar/PPJ/comparison/comparison.runs/synth_1/com_1010_1010.dcp
+INFO: [Project 1-1161] Replacing file L:/lidar/PPJ/comparison/comparison.srcs/utils_1/imports/synth_1/compare_20.dcp with file L:/lidar/PPJ/comparison/comparison.runs/synth_1/compare_512.dcp
 launch_runs synth_1 -jobs 8
-[Tue Apr 11 15:25:46 2023] Launched synth_1...
+[Tue Apr 11 14:47:38 2023] Launched synth_1...
 Run output will be captured here: L:/lidar/PPJ/comparison/comparison.runs/synth_1/runme.log
 open_run synth_1 -name synth_1
 Design is defaulting to impl run constrset: constrs_1
 Design is defaulting to synth run part: xczu3eg-sfvc784-2-i
 INFO: [Device 21-403] Loading part xczu3eg-sfvc784-2-i
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.167 . Memory (MB): peak = 2158.176 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.171 . Memory (MB): peak = 2156.398 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 10755 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-479] Netlist was created with Vivado 2021.2.1
@@ -83,16 +79,16 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Parsing XDC File [L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc]
 Finished Parsing XDC File [L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc]
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.034 . Memory (MB): peak = 2300.430 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2298.957 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10243 instances were transformed.
   IBUF => IBUF (IBUFCTRL, INBUF): 10243 instances
 
-open_run: Time (s): cpu = 00:00:30 ; elapsed = 00:00:21 . Memory (MB): peak = 2516.586 ; gain = 1162.293
+open_run: Time (s): cpu = 00:00:27 ; elapsed = 00:00:21 . Memory (MB): peak = 2517.285 ; gain = 1166.098
 report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -nworst 100 -input_pins -routable_nets -name timing_1
 INFO: [Timing 38-35] Done setting XDC timing constraints.
 INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Temperature grade: I, Delay Type: min_max.
 INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
-report_timing_summary: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 4044.652 ; gain = 0.000
+report_timing_summary: Time (s): cpu = 00:00:25 ; elapsed = 00:00:19 . Memory (MB): peak = 4278.082 ; gain = 1172.934
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 15:30:19 2023...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 14:51:58 2023...
