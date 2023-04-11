@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2.1 (win64) Build 3414424 Sun Dec 19 10:57:22 MST 2021
-| Date         : Tue Apr 11 10:35:10 2023
+| Date         : Tue Apr 11 10:58:03 2023
 | Host         : XS-WIN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file compare_512_utilization_synth.rpt -pb compare_512_utilization_synth.pb
 | Design       : compare_512
@@ -29,20 +29,20 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+-------+-------+------------+-----------+-------+
-|        Site Type        |  Used | Fixed | Prohibited | Available | Util% |
-+-------------------------+-------+-------+------------+-----------+-------+
-| CLB LUTs*               | 17940 |     0 |          0 |     70560 | 25.43 |
-|   LUT as Logic          | 17940 |     0 |          0 |     70560 | 25.43 |
-|   LUT as Memory         |     0 |     0 |          0 |     28800 |  0.00 |
-| CLB Registers           |     0 |     0 |          0 |    141120 |  0.00 |
-|   Register as Flip Flop |     0 |     0 |          0 |    141120 |  0.00 |
-|   Register as Latch     |     0 |     0 |          0 |    141120 |  0.00 |
-| CARRY8                  |  1022 |     0 |          0 |      8820 | 11.59 |
-| F7 Muxes                |     0 |     0 |          0 |     35280 |  0.00 |
-| F8 Muxes                |     0 |     0 |          0 |     17640 |  0.00 |
-| F9 Muxes                |     0 |     0 |          0 |      8820 |  0.00 |
-+-------------------------+-------+-------+------------+-----------+-------+
++-------------------------+------+-------+------------+-----------+-------+
+|        Site Type        | Used | Fixed | Prohibited | Available | Util% |
++-------------------------+------+-------+------------+-----------+-------+
+| CLB LUTs*               | 3079 |     0 |          0 |     70560 |  4.36 |
+|   LUT as Logic          | 3079 |     0 |          0 |     70560 |  4.36 |
+|   LUT as Memory         |    0 |     0 |          0 |     28800 |  0.00 |
+| CLB Registers           | 1012 |     0 |          0 |    141120 |  0.72 |
+|   Register as Flip Flop | 1012 |     0 |          0 |    141120 |  0.72 |
+|   Register as Latch     |    0 |     0 |          0 |    141120 |  0.00 |
+| CARRY8                  |  522 |     0 |          0 |      8820 |  5.92 |
+| F7 Muxes                |    0 |     0 |          0 |     35280 |  0.00 |
+| F8 Muxes                |    0 |     0 |          0 |     17640 |  0.00 |
+| F9 Muxes                |    0 |     0 |          0 |      8820 |  0.00 |
++-------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -59,7 +59,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 0     |          Yes |           - |        Reset |
+| 1012  |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -94,7 +94,7 @@ Table of Contents
 +------------+-------+-------+------------+-----------+---------+
 |  Site Type |  Used | Fixed | Prohibited | Available |  Util%  |
 +------------+-------+-------+------------+-----------+---------+
-| Bonded IOB | 10262 |     0 |          0 |       252 | 4072.22 |
+| Bonded IOB | 10263 |     0 |          0 |       252 | 4072.62 |
 +------------+-------+-------+------------+-----------+---------+
 
 
@@ -104,8 +104,8 @@ Table of Contents
 +----------------------+------+-------+------------+-----------+-------+
 |       Site Type      | Used | Fixed | Prohibited | Available | Util% |
 +----------------------+------+-------+------------+-----------+-------+
-| GLOBAL CLOCK BUFFERs |    0 |     0 |          0 |       196 |  0.00 |
-|   BUFGCE             |    0 |     0 |          0 |        88 |  0.00 |
+| GLOBAL CLOCK BUFFERs |    1 |     0 |          0 |       196 |  0.51 |
+|   BUFGCE             |    1 |     0 |          0 |        88 |  1.14 |
 |   BUFGCE_DIV         |    0 |     0 |          0 |        12 |  0.00 |
 |   BUFG_PS            |    0 |     0 |          0 |        72 |  0.00 |
 |   BUFGCTRL*          |    0 |     0 |          0 |        24 |  0.00 |
@@ -148,15 +148,17 @@ Table of Contents
 +----------+-------+---------------------+
 | Ref Name |  Used | Functional Category |
 +----------+-------+---------------------+
-| INBUF    | 10242 |                 I/O |
-| IBUFCTRL | 10242 |              Others |
-| LUT5     | 10220 |                 CLB |
-| LUT4     |  8930 |                 CLB |
-| LUT6     |  2610 |                 CLB |
-| CARRY8   |  1022 |                 CLB |
-| LUT2     |   130 |                 CLB |
+| INBUF    | 10243 |                 I/O |
+| IBUFCTRL | 10243 |              Others |
+| LUT4     |  5370 |                 CLB |
+| FDCE     |  1012 |            Register |
+| CARRY8   |   522 |                 CLB |
+| LUT5     |   260 |                 CLB |
 | OBUF     |    20 |                 I/O |
-| LUT3     |    20 |                 CLB |
+| LUT2     |     6 |                 CLB |
+| LUT6     |     5 |                 CLB |
+| LUT1     |     1 |                 CLB |
+| BUFGCE   |     1 |               Clock |
 +----------+-------+---------------------+
 
 
