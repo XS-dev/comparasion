@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-2-i" LaunchTime="1681195657" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/compare_20.dcp">
-  <File Type="PA-TCL" Name="com_1010_1010.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="com_1010_1010_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="com_1010_1010_reports.tcl"/>
-  <File Type="RDS-RDS" Name="com_1010_1010.vds"/>
-  <File Type="RDS-UTIL" Name="com_1010_1010_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="com_1010_1010_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="com_1010_1010.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="com_1010_1010_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="com_1010_1010_timing_summary_synth.pb"/>
+<GenRun Id="synth_1" LaunchPart="xczu3eg-sfvc784-2-i" LaunchTime="1681196938" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/compare_20.dcp">
+  <File Type="PA-TCL" Name="com_0101_0101.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="com_0101_0101_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="com_0101_0101_reports.tcl"/>
+  <File Type="RDS-RDS" Name="com_0101_0101.vds"/>
+  <File Type="RDS-UTIL" Name="com_0101_0101_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="com_0101_0101_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="com_0101_0101.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="com_0101_0101_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="com_0101_0101_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/new/ADDTiming.v">
@@ -25,7 +25,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/com_1010_1010.v">
+    <File Path="$PSRCDIR/sources_1/new/0101_0101.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -50,7 +50,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="com_1010_1010"/>
+      <Option Name="TopModule" Val="com_0101_0101"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
