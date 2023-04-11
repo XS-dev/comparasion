@@ -2,12 +2,12 @@
 # Vivado v2021.2.1 (64-bit)
 # SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
 # IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
-# Start of session at: Tue Apr 11 10:56:14 2023
-# Process ID: 16160
+# Start of session at: Tue Apr 11 14:47:41 2023
+# Process ID: 11204
 # Current directory: L:/lidar/PPJ/comparison/comparison.runs/synth_1
-# Command line: vivado.exe -log compare_512.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source compare_512.tcl
-# Log file: L:/lidar/PPJ/comparison/comparison.runs/synth_1/compare_512.vds
+# Command line: vivado.exe -log com_1010_1010.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source com_1010_1010.tcl
+# Log file: L:/lidar/PPJ/comparison/comparison.runs/synth_1/com_1010_1010.vds
 # Journal file: L:/lidar/PPJ/comparison/comparison.runs/synth_1\vivado.jou
 # Running On: XS-WIN, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14888 MB
 #-----------------------------------------------------------
-source compare_512.tcl -notrace
+source com_1010_1010.tcl -notrace

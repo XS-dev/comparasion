@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log compare_512.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source compare_512.tcl
+    with args -log com_1010_1010.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source com_1010_1010.tcl
 
 
 
@@ -9,29 +9,27 @@
   **** IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source compare_512.tcl -notrace
+source com_1010_1010.tcl -notrace
 Command: read_checkpoint -auto_incremental -incremental L:/lidar/PPJ/comparison/comparison.srcs/utils_1/imports/synth_1/compare_20.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from L:/lidar/PPJ/comparison/comparison.srcs/utils_1/imports/synth_1/compare_20.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
-Command: synth_design -top compare_512 -part xczu3eg-sfvc784-2-i
+Command: synth_design -top com_1010_1010 -part xczu3eg-sfvc784-2-i
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xczu3eg'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu3eg'
 INFO: [Device 21-403] Loading part xczu3eg-sfvc784-2-i
-WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 5224
+INFO: [Synth 8-7075] Helper process launched with PID 2960
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1656.270 ; gain = 251.867
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1654.672 ; gain = 250.496
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'compare_512' [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/compare_512.v:1]
+INFO: [Synth 8-6157] synthesizing module 'com_1010_1010' [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v:1]
 INFO: [Synth 8-6157] synthesizing module 'compare_20' [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/compare_20.v:2]
 INFO: [Synth 8-6155] done synthesizing module 'compare_20' (1#1) [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/compare_20.v:2]
 INFO: [Synth 8-6157] synthesizing module 'ADDTiming' [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/ADDTiming.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'ADDTiming' (2#1) [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/ADDTiming.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'compare_512' (3#1) [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/compare_512.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'com_1010_1010' (3#1) [L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_1010_1010.v:1]
 WARNING: [Synth 8-7129] Port data[19] in module ADDTiming is either unconnected or has no load
 WARNING: [Synth 8-7129] Port data[18] in module ADDTiming is either unconnected or has no load
 WARNING: [Synth 8-7129] Port data[17] in module ADDTiming is either unconnected or has no load
@@ -52,18 +50,18 @@ WARNING: [Synth 8-7129] Port data[3] in module ADDTiming is either unconnected o
 WARNING: [Synth 8-7129] Port data[2] in module ADDTiming is either unconnected or has no load
 WARNING: [Synth 8-7129] Port data[1] in module ADDTiming is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1728.625 ; gain = 324.223
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1726.289 ; gain = 322.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.535 ; gain = 342.133
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1744.184 ; gain = 340.008
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1746.535 ; gain = 342.133
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1744.184 ; gain = 340.008
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.346 . Memory (MB): peak = 1746.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.301 . Memory (MB): peak = 1744.184 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -72,15 +70,13 @@ Parsing XDC File [L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc]
 Finished Parsing XDC File [L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1887.730 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1878.430 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.145 . Memory (MB): peak = 1887.730 ; gain = 0.000
-WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
-INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.111 . Memory (MB): peak = 1878.430 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1887.730 ; gain = 483.328
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.430 ; gain = 474.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -88,24 +84,44 @@ Start Loading Part and Timing Information
 Loading part: xczu3eg-sfvc784-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1887.730 ; gain = 483.328
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.430 ; gain = 474.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1887.730 ; gain = 483.328
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.430 ; gain = 474.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1887.730 ; gain = 483.328
+Start Preparing Guide Design
 ---------------------------------------------------------------------------------
+CRITICAL WARNING: [Synth 8-6895] The reference checkpoint L:/lidar/PPJ/comparison/comparison.srcs/utils_1/imports/synth_1/compare_20.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.430 ; gain = 474.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.430 ; gain = 474.254
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 1878.430 ; gain = 474.254
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: no
+
+   Reason for not running incremental synthesis : 
+
+
+INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	               20 Bit    Registers := 510   
-	                1 Bit    Registers := 510   
+	               20 Bit    Registers := 340   
+	                1 Bit    Registers := 340   
 +---Muxes : 
 	   2 Input   20 Bit        Muxes := 1022  
 ---------------------------------------------------------------------------------
@@ -123,129 +139,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[191].u_ADDTiming_512/result_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[190].u_ADDTiming_512/result_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[13] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[189].u_ADDTiming_512/result_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[188].u_ADDTiming_512/result_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[3] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[5] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[8] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[9] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[10] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[11] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[187].u_ADDTiming_512/result_reg[12] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\T_512[186].u_ADDTiming_512/result_reg[12] )
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
-INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:49 . Memory (MB): peak = 1887.730 ; gain = 483.328
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1878.430 ; gain = 474.254
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:58 . Memory (MB): peak = 2366.906 ; gain = 962.504
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:34 ; elapsed = 00:00:36 . Memory (MB): peak = 2379.953 ; gain = 975.777
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:40 ; elapsed = 00:01:05 . Memory (MB): peak = 2446.289 ; gain = 1041.887
+Finished Timing Optimization : Time (s): cpu = 00:00:39 ; elapsed = 00:00:41 . Memory (MB): peak = 2435.719 ; gain = 1031.543
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:40 ; elapsed = 00:01:18 . Memory (MB): peak = 2456.289 ; gain = 1051.887
+Finished Technology Mapping : Time (s): cpu = 00:00:42 ; elapsed = 00:00:43 . Memory (MB): peak = 2457.285 ; gain = 1053.109
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -263,37 +177,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:44 ; elapsed = 00:01:22 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished IO Insertion : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:44 ; elapsed = 00:01:22 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:44 ; elapsed = 00:01:23 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:44 ; elapsed = 00:01:23 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:01:23 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:01:23 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -310,39 +224,39 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY8 |   522|
+|2     |CARRY8 |   512|
 |3     |LUT1   |     1|
-|4     |LUT2   |     6|
-|5     |LUT4   |  5370|
-|6     |LUT5   |   260|
-|7     |LUT6   |     5|
-|8     |FDCE   |  1012|
-|9     |IBUF   | 10243|
-|10    |OBUF   |    20|
+|4     |LUT4   |  5120|
+|5     |LUT5   |   256|
+|6     |LUT6   |    85|
+|7     |FDCE   |   672|
+|8     |IBUF   | 10243|
+|9     |OBUF   |    20|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:01:23 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:32 ; elapsed = 00:01:17 . Memory (MB): peak = 2461.867 ; gain = 916.270
-Synthesis Optimization Complete : Time (s): cpu = 00:00:45 ; elapsed = 00:01:25 . Memory (MB): peak = 2461.867 ; gain = 1057.465
+Synthesis finished with 0 errors, 1 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:33 ; elapsed = 00:00:40 . Memory (MB): peak = 2470.961 ; gain = 932.539
+Synthesis Optimization Complete : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 2470.961 ; gain = 1066.785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.176 . Memory (MB): peak = 2473.871 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 10766 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.178 . Memory (MB): peak = 2483.031 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 10756 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2533.625 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 2530.789 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10244 instances were transformed.
   BUFG => BUFGCE: 1 instance 
   IBUF => IBUF (IBUFCTRL, INBUF): 10243 instances
 
-Synth Design complete, checksum: a9f73282
+Synth Design complete, checksum: 19eb253c
 INFO: [Common 17-83] Releasing license: Synthesis
-128 Infos, 21 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 20 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:57 ; elapsed = 00:01:38 . Memory (MB): peak = 2533.625 ; gain = 1181.723
-INFO: [Common 17-1381] The checkpoint 'L:/lidar/PPJ/comparison/comparison.runs/synth_1/compare_512.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file compare_512_utilization_synth.rpt -pb compare_512_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 10:58:03 2023...
+synth_design: Time (s): cpu = 00:00:58 ; elapsed = 00:01:01 . Memory (MB): peak = 2530.789 ; gain = 1179.066
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+INFO: [Common 17-1381] The checkpoint 'L:/lidar/PPJ/comparison/comparison.runs/synth_1/com_1010_1010.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file com_1010_1010_utilization_synth.rpt -pb com_1010_1010_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 11 14:48:52 2023...
