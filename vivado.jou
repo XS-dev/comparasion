@@ -2,10 +2,10 @@
 # Vivado v2021.2.1 (64-bit)
 # SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
 # IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
-# Start of session at: Mon Apr 10 23:04:04 2023
-# Process ID: 16012
+# Start of session at: Tue Apr 11 14:06:46 2023
+# Process ID: 5172
 # Current directory: L:/lidar/PPJ/comparison
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17288 L:\lidar\PPJ\comparison\comparison.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4988 L:\lidar\PPJ\comparison\comparison.xpr
 # Log file: L:/lidar/PPJ/comparison/vivado.log
 # Journal file: L:/lidar/PPJ/comparison\vivado.jou
 # Running On: XS-WIN, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14888 MB
@@ -13,36 +13,21 @@
 start_gui
 open_project L:/lidar/PPJ/comparison/comparison.xpr
 update_compile_order -fileset sources_1
+add_files -norecurse L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/com_01010101.v
 update_compile_order -fileset sources_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-synth_design -rtl -rtl_skip_mlo -name rtl_1
-refresh_design
-refresh_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top com_01010101 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
-close_design
 open_run synth_1 -name synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
-refresh_design
-create_clock -period 10.000 -name clk -waveform {0.000 5.000} -add [get_ports -filter { NAME =~  "clk" && DIRECTION == "IN" }]
 report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -nworst 100 -input_pins -routable_nets -name timing_1
-file mkdir L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new
-close [ open L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc w ]
-add_files -fileset constrs_1 L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc
-set_property target_constrs_file L:/lidar/PPJ/comparison/comparison.srcs/constrs_1/new/j.xdc [current_fileset -constrset]
-save_constraints -force
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
 close_design
-reset_run synth_1
-launch_runs synth_1 -jobs 8
-wait_on_run synth_1
+synth_design -rtl -rtl_skip_mlo -name rtl_1
+close_design
 open_run synth_1 -name synth_1
 report_timing_summary -delay_type min_max -report_unconstrained -check_timing_verbose -max_paths 100 -nworst 100 -input_pins -routable_nets -name timing_1

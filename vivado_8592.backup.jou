@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vivado v2021.2.1 (64-bit)
+# SW Build 3414424 on Sun Dec 19 10:57:22 MST 2021
+# IP Build 3405791 on Sun Dec 19 15:54:35 MST 2021
+# Start of session at: Tue Apr 11 14:04:04 2023
+# Process ID: 8592
+# Current directory: L:/lidar/PPJ/comparison
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11644 L:\lidar\PPJ\comparison\comparison.xpr
+# Log file: L:/lidar/PPJ/comparison/vivado.log
+# Journal file: L:/lidar/PPJ/comparison\vivado.jou
+# Running On: XS-WIN, OS: Windows, CPU Frequency: 3194 MHz, CPU Physical cores: 16, Host memory: 14888 MB
+#-----------------------------------------------------------
+start_gui
+open_project L:/lidar/PPJ/comparison/comparison.xpr
+update_compile_order -fileset sources_1
