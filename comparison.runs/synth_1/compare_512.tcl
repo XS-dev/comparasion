@@ -85,6 +85,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
+  L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/ADDTiming.v
   L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/compare_20.v
   L:/lidar/PPJ/comparison/comparison.srcs/sources_1/new/compare_512.v
 }
