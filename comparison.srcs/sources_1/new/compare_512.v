@@ -5,8 +5,8 @@ module compare_512(
     input clk,
     output [19:0]biggst
 );
-//    wire [19:0] cmp_256[255:0];
-    wire [5119:0] cmp_256;
+    //    wire [19:0] cmp_256[255:0];
+    wire [19:0] cmp_256[255:0];
     wire [19:0] cmp_128[127:0];
     wire [19:0] cmp_64[63:0];
     wire [19:0] cmp_32[31:0];
@@ -14,6 +14,15 @@ module compare_512(
     wire [19:0] cmp_8[7:0];
     wire [19:0] cmp_4[3:0];
     wire [19:0] cmp_2[1:0];
+    
+//    wire [19:0] cmp_256_tmp[255:0];              
+//    wire [19:0] cmp_128_tmp[127:0];              
+//    wire [19:0] cmp_64_tmp[63:0];                
+//    wire [19:0] cmp_32_tmp[31:0];                
+//    wire [19:0] cmp_16_tmp[15:0];                
+//    wire [19:0] cmp_8_tmp[7:0];                  
+//    wire [19:0] cmp_4_tmp[3:0];                  
+//    wire [19:0] cmp_2_tmp[1:0];                  
 
     genvar i;
     generate
@@ -24,16 +33,26 @@ module compare_512(
                 .en(en),
                 .num1(cmp_512[i*40+19:i*40]),
                 .num2(cmp_512[i*40+39:i*40+20]),
-                .greater(cmp_256[i*20+19:i*20])
+                .greater(cmp_256[i])
             );
         end
+        //        for(i=0; i<128; i=i+1)
+        //        begin: Compare_256
+        //            compare_20 u_com_256(
+        //                .rst_n(rst_n),
+        //                .en(en),
+        //                .num1(cmp_256[i*40+19:i*40]),   
+        //                .num2(cmp_256[i*40+39:i*40+20]),
+        //                .greater(cmp_128[i])
+        //            );
+        //        end
         for(i=0; i<128; i=i+1)
         begin: Compare_256
             compare_20 u_com_256(
                 .rst_n(rst_n),
                 .en(en),
-                .num1(cmp_256[i*40+19:i*40]),   
-                .num2(cmp_256[i*40+39:i*40+20]),
+                .num1(cmp_256[i*2]),        
+                .num2(cmp_256[i*2+1]),      
                 .greater(cmp_128[i])
             );
         end
