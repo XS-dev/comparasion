@@ -1,3 +1,4 @@
 # comparasion
 用于激光雷达项目的那啥试验证明，嗯。
-这次是做了1010_1010的情况
+我把不同的排序做了不同的分支，GitHub网址是：https://github.com/XS-dev/comparasion.git
+汇总表还是在master里面的。main里面没东西。
